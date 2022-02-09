@@ -5,10 +5,9 @@
       #lbl {
         display: flex;
         font-family: sans-serif;
-        font-size: 18pt;
+        font-size: 16pt;
         color: #ffffff;
         padding: 5px;
-        border: 1px solid #ffffff;
         justify-content: left;
         line-height: 1.5;
         height:85%;
@@ -23,7 +22,7 @@
 
       #date{
           font-size:12pt;
-          font-weight: bold;
+          font-family: monospace;
       }
 
       body{
@@ -58,11 +57,11 @@
     var greet;
 
     if (hrs < 12)
-        greet = 'good morning, your name.  ';
+        greet = 'Good morning, Prathiksha.  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'good afternoon, your name. ';
+        greet = 'Good afternoon, Prathiksha. ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'good evening, your name.  ';
+        greet = 'Good evening, Prathiksha.  ';
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
