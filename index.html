@@ -6,8 +6,9 @@
         display: flex;
         font-family: sans-serif;
         font-size: 18pt;
-        color: #FFFFFF;
+        color: #ff5757;
         padding: 5px;
+        border: 1px solid #ffffff;
         justify-content: left;
         line-height: 1.5;
         height:85%;
@@ -22,11 +23,11 @@
 
       #date{
           font-size:12pt;
-          font-family: monospace;
+          font-weight: bold;
       }
 
       body{
-          background-color: #2F3438;
+          background-color: #ffffff;
       }
     </style>
 </head>
@@ -36,32 +37,32 @@
 
 <script>
     var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+    weekday[0] = "sunday";
+    weekday[1] = "monday";
+    weekday[2] = "tuesday";
+    weekday[3] = "wednesday";
+    weekday[4] = "thursday";
+    weekday[5] = "friday";
+    weekday[6] = "saturday";
 
-    const monthNames = ["Jan", "Feb", "March", "April", "May", "June",
-      "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+    const monthNames = ["january", "february", "march", "april", "may", "june",
+      "july", "august", "september", "october", "november", "december"
     ];
 
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
+    var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
 
     var greet;
 
     if (hrs < 12)
-        greet = 'Good Morning, Prathiksha.  ';
+        greet = 'good morning, your name.  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon, Prathiksha. ';
+        greet = 'good afternoon, your name. ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = Good Night, Prathiksha.  ';
+        greet = 'good evening, your name.  ';
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
